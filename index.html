@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Leftly – an app that helps households reduce food waste.">
+  <meta name="theme-color" content="#1F5A3D">
+  <title>Leftly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="phone" id="app">
+  <section class="view" id="v-splash"><div class="logo"><b>Leftly</b><svg viewBox="0 0 70 22" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M4 6c10 12 52 12 62 0"/><path d="M50 4c4-3 9-2 12 0-3 3-8 4-12 0z" fill="#fff"/></svg></div></section>
+
+  <section class="view" id="v-welcome" hidden>
+    <div class="collage" id="collage"></div>
+    <div class="welcome-body">
+      <h1>Welcome</h1>
+      <p class="muted small" style="margin:0">Leftly keeps track of the food you have at home, warns you before it goes off and suggests what to make with your leftovers.</p>
+      <button class="btn" data-go="login" style="margin-top:10px">Log in</button>
+      <button class="btn outline" data-go="register">Sign up</button>
+    </div>
+  </section>
+
+  <section class="view" id="v-login" hidden>
+    <div class="nav-top"><button class="icon-btn plain" data-back aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button><h2>Log in</h2><span></span></div>
+    <div class="center" style="margin-top:30px"><p class="red-title">Welcome back</p><p class="muted small" style="margin:4px 0 0">Log in to your account.</p></div>
+    <form class="stack" id="login-form" style="margin-top:20px">
+      <input class="field" id="l-mail" type="email" placeholder="Email or phone" value="nora.strand@example.com" autocomplete="off">
+      <input class="field" id="l-pass" type="password" placeholder="Password" value="matsvinn">
+      <button type="button" class="link" style="align-self:flex-end" data-toast="We've sent you a link to reset your password">Forgot password?</button>
+      <button class="btn" type="submit" style="margin-top:10px">Log in</button>
+    </form>
+    <p class="center muted small">Don't have an account? <button class="link" data-go="register">Sign up</button></p>
+  </section>
+
+  <section class="view" id="v-register" hidden>
+    <div class="nav-top"><button class="icon-btn plain" data-back aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button><h2>Sign up</h2><span></span></div>
+    <div class="center" style="margin-top:30px"><p class="red-title">New account</p><p class="muted small" style="margin:4px 0 0">Create an account and invite your household.</p></div>
+    <form class="stack" id="reg-form" style="margin-top:20px">
+      <input class="field" id="r-name" placeholder="Full name">
+      <input class="field" id="r-mail" type="email" placeholder="Email or phone">
+      <input class="field" id="r-pass" type="password" placeholder="Password">
+      <input class="field" id="r-pass2" type="password" placeholder="Confirm password">
+      <label class="cb"><input type="checkbox" id="r-ok" checked> I accept the <span style="color:var(--red)">privacy policy and terms</span></label>
+      <button class="btn" type="submit" style="margin-top:10px">Sign up</button>
+    </form>
+    <p class="center muted small">Already have an account? <button class="link" data-go="login">Log in</button></p>
+  </section>
+
+  <section class="view" id="v-home" hidden></section>
+  <section class="view" id="v-varer" hidden></section>
+  <section class="view" id="v-detail" hidden></section>
+  <section class="view" id="v-recipes" hidden></section>
+  <section class="view" id="v-recipe" hidden></section>
+  <section class="view" id="v-shop" hidden></section>
+  <section class="view" id="v-stats" hidden></section>
+  <section class="view" id="v-profile" hidden></section>
+  <section class="view" id="v-notif" hidden></section>
+  <section class="view" id="v-add" hidden></section>
+  <section class="view" id="v-success" hidden></section>
+  <section class="view" id="v-scan" hidden></section>
+  <section class="view" id="v-tilbud" hidden></section>
+  <section class="view" id="v-kart" hidden></section>
+  <section class="view" id="v-tips" hidden></section>
+  <section class="view" id="v-koder" hidden></section>
+  <section class="view" id="v-kalender" hidden></section>
+  <section class="view" id="v-settings" hidden></section>
+  <section class="view" id="v-feedback" hidden></section>
+  <section class="view" id="v-scanres" hidden></section>
+  <input type="file" id="photo-in" accept="image/*" hidden>
+
+  <nav class="tabs" id="tabs" hidden></nav>
+  <div id="layer"></div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
